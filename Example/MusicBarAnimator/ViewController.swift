@@ -12,7 +12,24 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        print(NSLocale.currentLocale().localeIdentifier)
+        
+//        print(NSLocale.currentLocale().objectForKey(NSLocaleLanguageCode))
+//        print(NSLocale.currentLocale().objectForKey(NSLocaleCountryCode))
+//        print("\(NSLocale.currentLocale().objectForKey(NSLocaleLanguageCode)!)-\(NSLocale.currentLocale().objectForKey(NSLocaleCountryCode)!)")
+        
+        print(NSLocale.preferredLanguages())
+        
+        
+//        let ls = NSLocale.preferredLanguages()
+        
+//        print(NSLocale.preferredLanguages())
+        
+//        for id in ls {
+//            
+//            print("orig id:\(id) -> \n\(NSLocale.canonicalLanguageIdentifierFromString(id))\n \(NSLocale.windowsLocaleCodeFromLocaleIdentifier(id))")
+//        }
+        
     }
 
     override func didReceiveMemoryWarning() {
