@@ -1,0 +1,6 @@
+framework module Pods_MusicBarAnimator_Example {
+  umbrella header "Pods-MusicBarAnimator_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

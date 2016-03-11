@@ -1,0 +1,14 @@
+PODS:
+  - MusicBarAnimator (0.1.0)
+
+DEPENDENCIES:
+  - MusicBarAnimator (from `../`)
+
+EXTERNAL SOURCES:
+  MusicBarAnimator:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MusicBarAnimator: e0309877b4b9b0cc81e178c7c359c1db753eb76a
+
+COCOAPODS: 0.39.0

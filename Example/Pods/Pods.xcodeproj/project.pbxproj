@@ -1,0 +1,780 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		146D6D21C84B6A20424E916C4DC377CF /* MusicBarAnimator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B80FA9A0CC6C56B9FCF07CA01D294F2 /* MusicBarAnimator-dummy.m */; };
+		3F6DFFDA96395C51DC4ECEDF09414316 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		4636AEE72CD1876D01A2DBBD6B394B6F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		60F14540D4FA9DAE965BBB8B0C5D7CB3 /* Pods-MusicBarAnimator_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC126E27716C54773563EB07CF1607E2 /* Pods-MusicBarAnimator_Tests-dummy.m */; };
+		6142351C648074F454CAB97384A0452C /* Pods-MusicBarAnimator_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C692C8AA92BF6BA94D5403C97F1DFE4 /* Pods-MusicBarAnimator_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6FD9B47C3DDF8B7E3E4156AC4982A0CF /* Pods-MusicBarAnimator_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D3453918BD140CABA745E0680295AF22 /* Pods-MusicBarAnimator_Example-dummy.m */; };
+		72167E4257619D8EAD6FAEFEE20F8A0E /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E682C53744A40461732FD1B16231899 /* ReplaceMe.swift */; };
+		A7B0408AED298C91E78527BAE697F661 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		ABCF702ECDBCA0B1584D7D345FD00175 /* Pods-MusicBarAnimator_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DD3AC19D684EDF7F841F029C173823A8 /* Pods-MusicBarAnimator_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EDBC00827B5C2C7D955896F700B33409 /* MusicBarAnimator.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 54A5B99F9601E9F338FF20C35606AEF0 /* MusicBarAnimator.bundle */; };
+		FB26447186C8A1C7F6E53496FA35BFAC /* MusicBarAnimator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DD9C904F80B087E8F0BD418E7AC1CFBB /* MusicBarAnimator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8A95AA7B7768A70B09363453844AB40C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 571FAC8213A62CF02209A89ED940AA07;
+			remoteInfo = MusicBarAnimator;
+		};
+		B5FBA1718CFC4E7B70562A7A0174D214 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16B6CF75D9E8A47D41AB0933765224B8;
+			remoteInfo = "MusicBarAnimator-MusicBarAnimator";
+		};
+		C0BE16DD4EF65AF1384FA4A03ED69E2C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 571FAC8213A62CF02209A89ED940AA07;
+			remoteInfo = MusicBarAnimator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		019968E6FF23C423F21CA5B42BA77859 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C692C8AA92BF6BA94D5403C97F1DFE4 /* Pods-MusicBarAnimator_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MusicBarAnimator_Tests-umbrella.h"; sourceTree = "<group>"; };
+		272B85803246E37DD5A66B85BB4611CD /* MusicBarAnimator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MusicBarAnimator-prefix.pch"; sourceTree = "<group>"; };
+		335390CA71A49AD0842BA6B256E17A48 /* Pods_MusicBarAnimator_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicBarAnimator_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		439787E5E22485D682B9EF7E83E4692A /* Pods-MusicBarAnimator_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MusicBarAnimator_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		4AE09A257BE5A316634EB435410A089D /* Pods-MusicBarAnimator_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MusicBarAnimator_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5046AB861C54F610548B5A4FA3F7EF77 /* Pods-MusicBarAnimator_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MusicBarAnimator_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		54A5B99F9601E9F338FF20C35606AEF0 /* MusicBarAnimator.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicBarAnimator.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		61A67D43D1DF4DE0F90CD273867F1DEB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		748A266D175257B4560AA279A183BA27 /* Pods-MusicBarAnimator_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MusicBarAnimator_Tests.modulemap"; sourceTree = "<group>"; };
+		7B05EB64165A4E1917D5AF94C55C82E6 /* Pods-MusicBarAnimator_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MusicBarAnimator_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		7B7C1E5A6F80AF77B84D028F0D29300E /* Pods_MusicBarAnimator_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicBarAnimator_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B80FA9A0CC6C56B9FCF07CA01D294F2 /* MusicBarAnimator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MusicBarAnimator-dummy.m"; sourceTree = "<group>"; };
+		90DED18174B0FA2D9B2B9A07A61CE572 /* MusicBarAnimator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MusicBarAnimator.modulemap; sourceTree = "<group>"; };
+		94AFA725EE41EE40F68066520F10BBFB /* Pods-MusicBarAnimator_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MusicBarAnimator_Example.release.xcconfig"; sourceTree = "<group>"; };
+		9E682C53744A40461732FD1B16231899 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
+		A55D9F2A5EE7F19B9C1382980203DA18 /* Pods-MusicBarAnimator_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MusicBarAnimator_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A725D0E57DBAA1F26CE511979BEC298C /* Pods-MusicBarAnimator_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MusicBarAnimator_Tests-resources.sh"; sourceTree = "<group>"; };
+		AFC72938CB8D2889A5A6685B858D0A9F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B59CCE89ED45CAD0B4F29CA539397888 /* Pods-MusicBarAnimator_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MusicBarAnimator_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		B607D7592397B3699B9AA60DDC374CAC /* Pods-MusicBarAnimator_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MusicBarAnimator_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CC126E27716C54773563EB07CF1607E2 /* Pods-MusicBarAnimator_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MusicBarAnimator_Tests-dummy.m"; sourceTree = "<group>"; };
+		CF220167D92A30900D49875192226A3F /* Pods-MusicBarAnimator_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MusicBarAnimator_Example-resources.sh"; sourceTree = "<group>"; };
+		D31D9E843B1198AAC5B2FA7327063EA7 /* Pods-MusicBarAnimator_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MusicBarAnimator_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		D3453918BD140CABA745E0680295AF22 /* Pods-MusicBarAnimator_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MusicBarAnimator_Example-dummy.m"; sourceTree = "<group>"; };
+		D4790BF18C06A1E6CF69C9D197A60225 /* Pods-MusicBarAnimator_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MusicBarAnimator_Example-frameworks.sh"; sourceTree = "<group>"; };
+		DC95BE48EE4067A139DD283ED3A2B7E4 /* Pods-MusicBarAnimator_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MusicBarAnimator_Example.modulemap"; sourceTree = "<group>"; };
+		DD3AC19D684EDF7F841F029C173823A8 /* Pods-MusicBarAnimator_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MusicBarAnimator_Example-umbrella.h"; sourceTree = "<group>"; };
+		DD9C904F80B087E8F0BD418E7AC1CFBB /* MusicBarAnimator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MusicBarAnimator-umbrella.h"; sourceTree = "<group>"; };
+		E10786B3760A1DF622229B069CB2C9DC /* MusicBarAnimator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusicBarAnimator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF1F3E79BC907B3E6F7361929BD4B348 /* MusicBarAnimator.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MusicBarAnimator.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3B53FFFAFFF854E1FAABA660EA6E327F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F6DFFDA96395C51DC4ECEDF09414316 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6ADF3B54574FCC0BBDCABD0CD866CA53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7B0408AED298C91E78527BAE697F661 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A81686B13128EB6AA52976E930DB87C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B18F57662C7AC124E9B1FDD256CA06AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4636AEE72CD1876D01A2DBBD6B394B6F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03AB1EE81CAF341F4493D2A936EA08DE /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				D65B78C3C2A6AC468B1EB2B17B8C3861 /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		3ADFFCC26C5FDE993DE0A22370675E85 /* MusicBarAnimator */ = {
+			isa = PBXGroup;
+			children = (
+				03AB1EE81CAF341F4493D2A936EA08DE /* Pod */,
+				B96FBE9215710540005042CBE4CF4281 /* Support Files */,
+			);
+			name = MusicBarAnimator;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		3B87B72CFBF65B1BCD151F822B35AEAD /* Pods-MusicBarAnimator_Example */ = {
+			isa = PBXGroup;
+			children = (
+				019968E6FF23C423F21CA5B42BA77859 /* Info.plist */,
+				DC95BE48EE4067A139DD283ED3A2B7E4 /* Pods-MusicBarAnimator_Example.modulemap */,
+				4AE09A257BE5A316634EB435410A089D /* Pods-MusicBarAnimator_Example-acknowledgements.markdown */,
+				5046AB861C54F610548B5A4FA3F7EF77 /* Pods-MusicBarAnimator_Example-acknowledgements.plist */,
+				D3453918BD140CABA745E0680295AF22 /* Pods-MusicBarAnimator_Example-dummy.m */,
+				D4790BF18C06A1E6CF69C9D197A60225 /* Pods-MusicBarAnimator_Example-frameworks.sh */,
+				CF220167D92A30900D49875192226A3F /* Pods-MusicBarAnimator_Example-resources.sh */,
+				DD3AC19D684EDF7F841F029C173823A8 /* Pods-MusicBarAnimator_Example-umbrella.h */,
+				439787E5E22485D682B9EF7E83E4692A /* Pods-MusicBarAnimator_Example.debug.xcconfig */,
+				94AFA725EE41EE40F68066520F10BBFB /* Pods-MusicBarAnimator_Example.release.xcconfig */,
+			);
+			name = "Pods-MusicBarAnimator_Example";
+			path = "Target Support Files/Pods-MusicBarAnimator_Example";
+			sourceTree = "<group>";
+		};
+		780A0C6ED5938F7ABA338A45005309FD /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3ADFFCC26C5FDE993DE0A22370675E85 /* MusicBarAnimator */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				780A0C6ED5938F7ABA338A45005309FD /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				A268D0F4E802F7AA418A40A17040CCC1 /* Products */,
+				8912E6C5C94A65F0F0B9AD162881D51B /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8912E6C5C94A65F0F0B9AD162881D51B /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B87B72CFBF65B1BCD151F822B35AEAD /* Pods-MusicBarAnimator_Example */,
+				9BF6CB59BA8CD7F6D935C1101022ED28 /* Pods-MusicBarAnimator_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		9BF6CB59BA8CD7F6D935C1101022ED28 /* Pods-MusicBarAnimator_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				AFC72938CB8D2889A5A6685B858D0A9F /* Info.plist */,
+				748A266D175257B4560AA279A183BA27 /* Pods-MusicBarAnimator_Tests.modulemap */,
+				A55D9F2A5EE7F19B9C1382980203DA18 /* Pods-MusicBarAnimator_Tests-acknowledgements.markdown */,
+				B607D7592397B3699B9AA60DDC374CAC /* Pods-MusicBarAnimator_Tests-acknowledgements.plist */,
+				CC126E27716C54773563EB07CF1607E2 /* Pods-MusicBarAnimator_Tests-dummy.m */,
+				D31D9E843B1198AAC5B2FA7327063EA7 /* Pods-MusicBarAnimator_Tests-frameworks.sh */,
+				A725D0E57DBAA1F26CE511979BEC298C /* Pods-MusicBarAnimator_Tests-resources.sh */,
+				0C692C8AA92BF6BA94D5403C97F1DFE4 /* Pods-MusicBarAnimator_Tests-umbrella.h */,
+				B59CCE89ED45CAD0B4F29CA539397888 /* Pods-MusicBarAnimator_Tests.debug.xcconfig */,
+				7B05EB64165A4E1917D5AF94C55C82E6 /* Pods-MusicBarAnimator_Tests.release.xcconfig */,
+			);
+			name = "Pods-MusicBarAnimator_Tests";
+			path = "Target Support Files/Pods-MusicBarAnimator_Tests";
+			sourceTree = "<group>";
+		};
+		A268D0F4E802F7AA418A40A17040CCC1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				54A5B99F9601E9F338FF20C35606AEF0 /* MusicBarAnimator.bundle */,
+				E10786B3760A1DF622229B069CB2C9DC /* MusicBarAnimator.framework */,
+				7B7C1E5A6F80AF77B84D028F0D29300E /* Pods_MusicBarAnimator_Example.framework */,
+				335390CA71A49AD0842BA6B256E17A48 /* Pods_MusicBarAnimator_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B96FBE9215710540005042CBE4CF4281 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				61A67D43D1DF4DE0F90CD273867F1DEB /* Info.plist */,
+				90DED18174B0FA2D9B2B9A07A61CE572 /* MusicBarAnimator.modulemap */,
+				EF1F3E79BC907B3E6F7361929BD4B348 /* MusicBarAnimator.xcconfig */,
+				7B80FA9A0CC6C56B9FCF07CA01D294F2 /* MusicBarAnimator-dummy.m */,
+				272B85803246E37DD5A66B85BB4611CD /* MusicBarAnimator-prefix.pch */,
+				DD9C904F80B087E8F0BD418E7AC1CFBB /* MusicBarAnimator-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/MusicBarAnimator";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D65B78C3C2A6AC468B1EB2B17B8C3861 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9E682C53744A40461732FD1B16231899 /* ReplaceMe.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		97AEF334FB3EE7C6F8CFAD22614B53F4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB26447186C8A1C7F6E53496FA35BFAC /* MusicBarAnimator-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE70672C46F63AF56C3D6D697A14D9EE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6142351C648074F454CAB97384A0452C /* Pods-MusicBarAnimator_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D61D935CB5E050AC704A1685630A7BBB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABCF702ECDBCA0B1584D7D345FD00175 /* Pods-MusicBarAnimator_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		16B6CF75D9E8A47D41AB0933765224B8 /* MusicBarAnimator-MusicBarAnimator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3079174F64C6EA7091BACEE8A5A2D63 /* Build configuration list for PBXNativeTarget "MusicBarAnimator-MusicBarAnimator" */;
+			buildPhases = (
+				57B81B1C4D0EACACBE6D071B367C4C89 /* Sources */,
+				7A81686B13128EB6AA52976E930DB87C /* Frameworks */,
+				7C640DEFEC4265590205C761F2B3C6C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MusicBarAnimator-MusicBarAnimator";
+			productName = "MusicBarAnimator-MusicBarAnimator";
+			productReference = 54A5B99F9601E9F338FF20C35606AEF0 /* MusicBarAnimator.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		571FAC8213A62CF02209A89ED940AA07 /* MusicBarAnimator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B38EFEC9B6E1A0757E1D4F2BA73004CB /* Build configuration list for PBXNativeTarget "MusicBarAnimator" */;
+			buildPhases = (
+				82CEF13BA367B0ABAEAF469221031AF6 /* Sources */,
+				3B53FFFAFFF854E1FAABA660EA6E327F /* Frameworks */,
+				6C4E3EC6E696A5E89219D5F7734BCEEB /* Resources */,
+				97AEF334FB3EE7C6F8CFAD22614B53F4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B81ABDB6FAC7C77A5B263844765C8D5 /* PBXTargetDependency */,
+			);
+			name = MusicBarAnimator;
+			productName = MusicBarAnimator;
+			productReference = E10786B3760A1DF622229B069CB2C9DC /* MusicBarAnimator.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7497112B8C8CD0C1A7EC4647AF008F3B /* Pods-MusicBarAnimator_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3481895F1F9F138F69CD64A1593CA6D /* Build configuration list for PBXNativeTarget "Pods-MusicBarAnimator_Example" */;
+			buildPhases = (
+				69BB201E78E734FCA45951DE92EB6A18 /* Sources */,
+				B18F57662C7AC124E9B1FDD256CA06AC /* Frameworks */,
+				D61D935CB5E050AC704A1685630A7BBB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E6CC412E26BE7663FFD98D0DB9A0117C /* PBXTargetDependency */,
+			);
+			name = "Pods-MusicBarAnimator_Example";
+			productName = "Pods-MusicBarAnimator_Example";
+			productReference = 7B7C1E5A6F80AF77B84D028F0D29300E /* Pods_MusicBarAnimator_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8F16CEE7AA2A9CAC07F62B619D193154 /* Pods-MusicBarAnimator_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FA5B3B51F4C870F0A23E009D2EFCF1E /* Build configuration list for PBXNativeTarget "Pods-MusicBarAnimator_Tests" */;
+			buildPhases = (
+				58BF8415484CE200A8276A0ABAF2E7BE /* Sources */,
+				6ADF3B54574FCC0BBDCABD0CD866CA53 /* Frameworks */,
+				AE70672C46F63AF56C3D6D697A14D9EE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6D8D09BA1F85F2E80D2F34C43A1A9D8A /* PBXTargetDependency */,
+			);
+			name = "Pods-MusicBarAnimator_Tests";
+			productName = "Pods-MusicBarAnimator_Tests";
+			productReference = 335390CA71A49AD0842BA6B256E17A48 /* Pods_MusicBarAnimator_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = A268D0F4E802F7AA418A40A17040CCC1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				571FAC8213A62CF02209A89ED940AA07 /* MusicBarAnimator */,
+				16B6CF75D9E8A47D41AB0933765224B8 /* MusicBarAnimator-MusicBarAnimator */,
+				7497112B8C8CD0C1A7EC4647AF008F3B /* Pods-MusicBarAnimator_Example */,
+				8F16CEE7AA2A9CAC07F62B619D193154 /* Pods-MusicBarAnimator_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6C4E3EC6E696A5E89219D5F7734BCEEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDBC00827B5C2C7D955896F700B33409 /* MusicBarAnimator.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C640DEFEC4265590205C761F2B3C6C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		57B81B1C4D0EACACBE6D071B367C4C89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58BF8415484CE200A8276A0ABAF2E7BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60F14540D4FA9DAE965BBB8B0C5D7CB3 /* Pods-MusicBarAnimator_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69BB201E78E734FCA45951DE92EB6A18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FD9B47C3DDF8B7E3E4156AC4982A0CF /* Pods-MusicBarAnimator_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82CEF13BA367B0ABAEAF469221031AF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146D6D21C84B6A20424E916C4DC377CF /* MusicBarAnimator-dummy.m in Sources */,
+				72167E4257619D8EAD6FAEFEE20F8A0E /* ReplaceMe.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3B81ABDB6FAC7C77A5B263844765C8D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "MusicBarAnimator-MusicBarAnimator";
+			target = 16B6CF75D9E8A47D41AB0933765224B8 /* MusicBarAnimator-MusicBarAnimator */;
+			targetProxy = B5FBA1718CFC4E7B70562A7A0174D214 /* PBXContainerItemProxy */;
+		};
+		6D8D09BA1F85F2E80D2F34C43A1A9D8A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MusicBarAnimator;
+			target = 571FAC8213A62CF02209A89ED940AA07 /* MusicBarAnimator */;
+			targetProxy = C0BE16DD4EF65AF1384FA4A03ED69E2C /* PBXContainerItemProxy */;
+		};
+		E6CC412E26BE7663FFD98D0DB9A0117C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MusicBarAnimator;
+			target = 571FAC8213A62CF02209A89ED940AA07 /* MusicBarAnimator */;
+			targetProxy = 8A95AA7B7768A70B09363453844AB40C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1E193494F967B5DA34097A8C19CF56A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94AFA725EE41EE40F68066520F10BBFB /* Pods-MusicBarAnimator_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MusicBarAnimator_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MusicBarAnimator_Example/Pods-MusicBarAnimator_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_MusicBarAnimator_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		225B69BE4F6FB8E8C9BC89A44AC1D63E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 439787E5E22485D682B9EF7E83E4692A /* Pods-MusicBarAnimator_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MusicBarAnimator_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MusicBarAnimator_Example/Pods-MusicBarAnimator_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_MusicBarAnimator_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5529BA32C53928807F8CA2BFC2ADC51D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF1F3E79BC907B3E6F7361929BD4B348 /* MusicBarAnimator.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = MusicBarAnimator;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		552D02D5BA751AC2E8790D2811D496CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		638719AA2B864CC228F21F99DC332E7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B05EB64165A4E1917D5AF94C55C82E6 /* Pods-MusicBarAnimator_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MusicBarAnimator_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MusicBarAnimator_Tests/Pods-MusicBarAnimator_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_MusicBarAnimator_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B0CDF0143F1D66529AC0B9C5EC2FD7F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF1F3E79BC907B3E6F7361929BD4B348 /* MusicBarAnimator.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MusicBarAnimator/MusicBarAnimator-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MusicBarAnimator/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MusicBarAnimator/MusicBarAnimator.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = MusicBarAnimator;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D66A6276A3CC77B48A15F7F8C1FA5303 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF1F3E79BC907B3E6F7361929BD4B348 /* MusicBarAnimator.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MusicBarAnimator/MusicBarAnimator-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MusicBarAnimator/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MusicBarAnimator/MusicBarAnimator.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = MusicBarAnimator;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F22BF7A12D96880C0C8B3E4755E88DB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B59CCE89ED45CAD0B4F29CA539397888 /* Pods-MusicBarAnimator_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MusicBarAnimator_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MusicBarAnimator_Tests/Pods-MusicBarAnimator_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_MusicBarAnimator_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F3629060DF9D7A1C2FDE0FC30D52A99B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF1F3E79BC907B3E6F7361929BD4B348 /* MusicBarAnimator.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = MusicBarAnimator;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				552D02D5BA751AC2E8790D2811D496CA /* Debug */,
+				10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FA5B3B51F4C870F0A23E009D2EFCF1E /* Build configuration list for PBXNativeTarget "Pods-MusicBarAnimator_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F22BF7A12D96880C0C8B3E4755E88DB4 /* Debug */,
+				638719AA2B864CC228F21F99DC332E7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3481895F1F9F138F69CD64A1593CA6D /* Build configuration list for PBXNativeTarget "Pods-MusicBarAnimator_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				225B69BE4F6FB8E8C9BC89A44AC1D63E /* Debug */,
+				1E193494F967B5DA34097A8C19CF56A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B38EFEC9B6E1A0757E1D4F2BA73004CB /* Build configuration list for PBXNativeTarget "MusicBarAnimator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0CDF0143F1D66529AC0B9C5EC2FD7F4 /* Debug */,
+				D66A6276A3CC77B48A15F7F8C1FA5303 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3079174F64C6EA7091BACEE8A5A2D63 /* Build configuration list for PBXNativeTarget "MusicBarAnimator-MusicBarAnimator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3629060DF9D7A1C2FDE0FC30D52A99B /* Debug */,
+				5529BA32C53928807F8CA2BFC2ADC51D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
