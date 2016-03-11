@@ -13,7 +13,7 @@
 		60F14540D4FA9DAE965BBB8B0C5D7CB3 /* Pods-MusicBarAnimator_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC126E27716C54773563EB07CF1607E2 /* Pods-MusicBarAnimator_Tests-dummy.m */; };
 		6142351C648074F454CAB97384A0452C /* Pods-MusicBarAnimator_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C692C8AA92BF6BA94D5403C97F1DFE4 /* Pods-MusicBarAnimator_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6FD9B47C3DDF8B7E3E4156AC4982A0CF /* Pods-MusicBarAnimator_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D3453918BD140CABA745E0680295AF22 /* Pods-MusicBarAnimator_Example-dummy.m */; };
-		72167E4257619D8EAD6FAEFEE20F8A0E /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E682C53744A40461732FD1B16231899 /* ReplaceMe.swift */; };
+		72167E4257619D8EAD6FAEFEE20F8A0E /* MusicBarAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E682C53744A40461732FD1B16231899 /* MusicBarAnimator.swift */; };
 		A7B0408AED298C91E78527BAE697F661 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		ABCF702ECDBCA0B1584D7D345FD00175 /* Pods-MusicBarAnimator_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DD3AC19D684EDF7F841F029C173823A8 /* Pods-MusicBarAnimator_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EDBC00827B5C2C7D955896F700B33409 /* MusicBarAnimator.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 54A5B99F9601E9F338FF20C35606AEF0 /* MusicBarAnimator.bundle */; };
@@ -61,7 +61,7 @@
 		7B80FA9A0CC6C56B9FCF07CA01D294F2 /* MusicBarAnimator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MusicBarAnimator-dummy.m"; sourceTree = "<group>"; };
 		90DED18174B0FA2D9B2B9A07A61CE572 /* MusicBarAnimator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MusicBarAnimator.modulemap; sourceTree = "<group>"; };
 		94AFA725EE41EE40F68066520F10BBFB /* Pods-MusicBarAnimator_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MusicBarAnimator_Example.release.xcconfig"; sourceTree = "<group>"; };
-		9E682C53744A40461732FD1B16231899 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
+		9E682C53744A40461732FD1B16231899 /* MusicBarAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MusicBarAnimator.swift; sourceTree = "<group>"; };
 		A55D9F2A5EE7F19B9C1382980203DA18 /* Pods-MusicBarAnimator_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MusicBarAnimator_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A725D0E57DBAA1F26CE511979BEC298C /* Pods-MusicBarAnimator_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MusicBarAnimator_Tests-resources.sh"; sourceTree = "<group>"; };
 		AFC72938CB8D2889A5A6685B858D0A9F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -241,7 +241,7 @@
 		D65B78C3C2A6AC468B1EB2B17B8C3861 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				9E682C53744A40461732FD1B16231899 /* ReplaceMe.swift */,
+				9E682C53744A40461732FD1B16231899 /* MusicBarAnimator.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -424,7 +424,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				146D6D21C84B6A20424E916C4DC377CF /* MusicBarAnimator-dummy.m in Sources */,
-				72167E4257619D8EAD6FAEFEE20F8A0E /* ReplaceMe.swift in Sources */,
+				72167E4257619D8EAD6FAEFEE20F8A0E /* MusicBarAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
