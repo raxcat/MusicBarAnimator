@@ -7,19 +7,19 @@
 
 import UIKit
 
-class MusicBarAnimator: NSObject, UIViewControllerAnimatedTransitioning {
-    let duration    = 0.8
-    var presenting  = true
-    var usingSpringWithDamping = 0.8
-    var initialSpringVelocity = 1.0
-    var barView: UIView? = nil
-    var viewForDarkness: UIView? = nil
+public class MusicBarAnimator: NSObject, UIViewControllerAnimatedTransitioning {
+    public let duration    = 0.8
+    public var presenting  = true
+    public var usingSpringWithDamping = 0.8
+    public var initialSpringVelocity = 1.0
+    public var barView: UIView? = nil
+    public var viewForDarkness: UIView? = nil
     
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?)-> NSTimeInterval {
+    public func transitionDuration(transitionContext: UIViewControllerContextTransitioning?)-> NSTimeInterval {
         return duration
     }
     
-    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+    public func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
         let containerView = transitionContext.containerView()!
         if presenting {
             let fromView = barView ?? transitionContext.viewForKey(UITransitionContextFromViewKey)!
