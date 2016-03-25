@@ -17,5 +17,8 @@ class StandaloneViewController: UIViewController {
 
     @IBOutlet weak var imageview: UIImageView!
 
+    @IBAction func dismiss(){
+        self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+    }
     
 }

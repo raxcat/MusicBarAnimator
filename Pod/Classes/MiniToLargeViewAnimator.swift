@@ -6,7 +6,7 @@ public class MiniToLargeViewAnimator: BasicAnimator {
     
     public var kAnimationDuration: NSTimeInterval = 0.4
     
-//    public weak var barView:UIView?
+    public weak var barView:UIView?
     
     public override func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return kAnimationDuration
@@ -16,19 +16,26 @@ public class MiniToLargeViewAnimator: BasicAnimator {
         
         let fromVCRect = transitionContext.initialFrameForViewController(fromVC)
         var toVCRect = fromVCRect
-        toVCRect.origin.y = toVCRect.size.height - self.initialY
+        toVCRect.origin.y = toVCRect.size.height //- self.initialY
         
         toVC.view.frame = toVCRect
         let container = transitionContext.containerView()
         let imageView = self.fakeMiniView()
-        toVC.view.addSubview(imageView)
-        container?.addSubview(fromVC.view)
+        container?.addSubview(imageView)
         container?.addSubview(toVC.view)
+        
+        var barFrame = imageView.frame
+        barFrame.origin.y = fromVCRect.origin.y - CGRectGetHeight(barFrame)
+        
         
         UIView.animateWithDuration(kAnimationDuration, animations: { () -> Void in
             toVC.view.frame = fromVCRect
-            imageView.alpha = 0
+            imageView.frame = barFrame
+            fromVC.view.alpha = 0.0
             }) { (finished) -> Void in
+                fromVC.view.alpha = 1.0
+                imageView.removeFromSuperview()
+                
                 if transitionContext.transitionWasCancelled() {
                     transitionContext.completeTransition(false)
                 }else{
@@ -67,11 +74,13 @@ public class MiniToLargeViewAnimator: BasicAnimator {
     }
     
     func fakeMiniView() -> UIView {
-        
-        
-        let dummyView: DummyView = DummyView(frame: CGRectMake(0.0, 0.0, UIScreen.mainScreen().bounds.size.width, abs(initialY)))
-        return dummyView
-        
+        guard let view = self.barView else {
+            let dummyView: DummyView = DummyView(frame: CGRectMake(0.0, 0.0, UIScreen.mainScreen().bounds.size.width, abs(initialY)))
+            return dummyView
+        }
+        let imageView =  UIImageView(frame: view.frame)
+        imageView.image = view.snapshot()
+        return imageView
     }
     
 }

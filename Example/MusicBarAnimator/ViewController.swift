@@ -32,6 +32,11 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
         }
         
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.disableInteractivePlayerTransitioning = false
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -42,7 +47,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     }
     
     @IBAction func unwindToMainViewController(segue:UIStoryboardSegue) {
-        
+        self.disableInteractivePlayerTransitioning = true
     }
     
     func showStandaloneViewController()->Void{
@@ -55,7 +60,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         let animator = MiniToLargeViewAnimator()
         animator.initialY = kButtonHeight
-//        animator.barView = self.barView
+        animator.barView = self.barView
         animator.transitionType = BasicAnimator.ModalAnimatedTransitioningType.Present
         return animator
     }
