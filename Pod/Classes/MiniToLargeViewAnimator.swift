@@ -31,6 +31,7 @@ public class MiniToLargeViewAnimator: BasicAnimator {
         UIView.animateWithDuration(kAnimationDuration, animations: { () -> Void in
             toVC.view.frame = fromVCRect
             imageView.frame = barFrame
+            imageView.alpha = 0.0
             fromVC.view.alpha = 0.0
             }) { (finished) -> Void in
                 fromVC.view.alpha = 1.0
@@ -48,19 +49,27 @@ public class MiniToLargeViewAnimator: BasicAnimator {
     public override func animateDismissingInContext(transitionContext: UIViewControllerContextTransitioning, toVC: UIViewController, fromVC: UIViewController) {
         
         var fromVCRect: CGRect = transitionContext.initialFrameForViewController(fromVC)
-        fromVCRect.origin.y = fromVCRect.size.height - self.initialY
+        fromVCRect.origin.y = fromVCRect.size.height
+        
+        
+        let container = transitionContext.containerView()
         
         let imageView = fakeMiniView()
+        var barFrame = imageView.frame
+        barFrame.origin = CGPoint(x: 0.0, y: -CGRectGetHeight(barFrame))
+        imageView.frame = barFrame
         fromVC.view.addSubview(imageView)
-        let container = transitionContext.containerView()
-        container?.addSubview(toVC.view)
-        container?.addSubview(fromVC.view)
-        imageView.alpha = 0
+        imageView.backgroundColor = UIColor.greenColor()
+        container?.insertSubview(toVC.view, atIndex: 0)
         
+        toVC.view.alpha = 0.0
+        imageView.alpha = 0.0
         
         UIView.animateWithDuration(kAnimationDuration, animations: { () -> Void in
             fromVC.view.frame = fromVCRect
-            imageView.alpha = 1
+            imageView.alpha = 1.0
+            toVC.view.alpha = 1.0
+            
             }) { (finished) -> Void in
                 imageView.removeFromSuperview()
                 if transitionContext.transitionWasCancelled() {
@@ -69,8 +78,6 @@ public class MiniToLargeViewAnimator: BasicAnimator {
                     transitionContext.completeTransition(true)
                 }
         }
-        
-        
     }
     
     func fakeMiniView() -> UIView {
@@ -78,6 +85,7 @@ public class MiniToLargeViewAnimator: BasicAnimator {
             let dummyView: DummyView = DummyView(frame: CGRectMake(0.0, 0.0, UIScreen.mainScreen().bounds.size.width, abs(initialY)))
             return dummyView
         }
+        print("fake mini :\(view)")
         let imageView =  UIImageView(frame: view.frame)
         imageView.image = view.snapshot()
         return imageView

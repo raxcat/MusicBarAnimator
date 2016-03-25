@@ -39,6 +39,7 @@ public class MiniToLargeViewInteractor: UIPercentDrivenInteractiveTransition {
             var percent = translation.y / DragAmount
             percent = CGFloat(fmaxf(Float(percent), 0.0))
             percent = CGFloat(fminf(Float(percent), 1.0))
+            print(percent)
             self.updateInteractiveTransition(percent)
             self.shouldComplete = percent > Threhold
         case .Ended:

@@ -47,6 +47,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     }
     
     @IBAction func unwindToMainViewController(segue:UIStoryboardSegue) {
+        print("unwind: \(self.barView)")
         self.disableInteractivePlayerTransitioning = true
     }
     
@@ -68,6 +69,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         let animator = MiniToLargeViewAnimator()
         animator.initialY = kButtonHeight
+        animator.barView = self.barView
         animator.transitionType = BasicAnimator.ModalAnimatedTransitioningType.Dismiss
         return animator
     }
