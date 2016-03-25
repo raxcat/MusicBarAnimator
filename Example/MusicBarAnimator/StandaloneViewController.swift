@@ -2,7 +2,7 @@
 //  StandaloneViewController.swift
 //  MusicBarAnimator
 //
-//  Created by brianliu on 2016/3/24.
+//  Created by raxcat on 2016/3/24.
 //  Copyright © 2016年 CocoaPods. All rights reserved.
 //
 

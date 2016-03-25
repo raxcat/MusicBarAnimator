@@ -59,6 +59,9 @@
                                             <constraint firstAttribute="height" constant="44" id="oFo-ps-NAe"/>
                                         </constraints>
                                         <state key="normal" image="play"/>
+                                        <connections>
+                                            <action selector="clicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="18v-im-lOY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
@@ -80,12 +83,18 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kGi-zb-Mfv">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="main screen" translatesAutoresizingMaskIntoConstraints="NO" id="JEJ-KC-wKl">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="main screen" translatesAutoresizingMaskIntoConstraints="NO" id="JEJ-KC-wKl">
                                         <rect key="frame" x="0.0" y="-44" width="600" height="600"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="JEJ-KC-wKl" firstAttribute="leading" secondItem="kGi-zb-Mfv" secondAttribute="leading" id="NTr-5g-Z19"/>
+                                    <constraint firstAttribute="trailing" secondItem="JEJ-KC-wKl" secondAttribute="trailing" id="Ooe-Aw-cqJ"/>
+                                    <constraint firstItem="JEJ-KC-wKl" firstAttribute="top" secondItem="kGi-zb-Mfv" secondAttribute="top" id="U1h-jT-E5r"/>
+                                    <constraint firstAttribute="bottom" secondItem="JEJ-KC-wKl" secondAttribute="bottom" id="zd2-cg-AHD"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -99,15 +108,18 @@
                             <constraint firstItem="hUL-pU-UK9" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="yAw-hP-gCa"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="barView" destination="hUL-pU-UK9" id="J2n-uc-ygR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="380" y="381"/>
+            <point key="canvasLocation" x="537" y="381"/>
         </scene>
         <!--Standalone View Controller-->
         <scene sceneID="u05-xS-cfE">
             <objects>
-                <viewController storyboardIdentifier="detail" id="cxw-iS-qEB" customClass="StandaloneViewController" customModule="MusicBarAnimator_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="standalone" id="cxw-iS-qEB" customClass="StandaloneViewController" customModule="MusicBarAnimator_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XRd-6R-7Ke"/>
                         <viewControllerLayoutGuide type="bottom" id="kdI-6F-FPb"/>
@@ -131,7 +143,7 @@
                                 <rect key="frame" x="20" y="20" width="54" height="30"/>
                                 <state key="normal" title="Dismiss"/>
                                 <connections>
-                                    <segue destination="JKk-vL-LPh" kind="unwind" unwindAction="unwindToBarViewController:" id="5Mx-jy-wcv"/>
+                                    <segue destination="JKk-vL-LPh" kind="unwind" unwindAction="unwindToMainViewController:" id="CUD-Gs-aaL"/>
                                 </connections>
                             </button>
                         </subviews>

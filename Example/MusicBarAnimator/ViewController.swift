@@ -7,23 +7,80 @@
 //
 
 import UIKit
+import MusicBarAnimator
 
+class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
 
-class ViewController: UIViewController {
-
+    
+    var disableInteractivePlayerTransitioning: Bool =  false
+//    weak var dummyView:DummyView? = nil
+    var standaloneViewController: StandaloneViewController?
+    
+    @IBOutlet weak var barView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let vc = self.storyboard?.instantiateViewControllerWithIdentifier("standalone") as? StandaloneViewController{
+            vc.transitioningDelegate = self
+            self.standaloneViewController = vc
+        }
+        
+        self.presentIndicator = MiniToLargeViewInteractor()
+        self.presentIndicator?.attachToViewController(self, withView: self.barView, presentViewController: self.standaloneViewController)
+        self.dismissIndicator = MiniToLargeViewInteractor()
+        if let view = self.standaloneViewController?.view, vc = self.standaloneViewController {
+            self.dismissIndicator?.attachToViewController(vc, withView: view)
+        }
         
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func clicked(sender: AnyObject) {
+        self.showStandaloneViewController()
+    }
     
-
+    @IBAction func unwindToMainViewController(segue:UIStoryboardSegue) {
+        
+    }
     
+    func showStandaloneViewController()->Void{
+        guard let vc = self.standaloneViewController else {return}
+        self.showViewController(vc, sender: self)
+    }
+    
+    let kButtonHeight: CGFloat = 50;
+    
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        let animator = MiniToLargeViewAnimator()
+        animator.initialY = kButtonHeight
+//        animator.barView = self.barView
+        animator.transitionType = BasicAnimator.ModalAnimatedTransitioningType.Present
+        return animator
+    }
+    
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        let animator = MiniToLargeViewAnimator()
+        animator.initialY = kButtonHeight
+        animator.transitionType = BasicAnimator.ModalAnimatedTransitioningType.Dismiss
+        return animator
+    }
+    
+    var presentIndicator:MiniToLargeViewInteractor? = nil
+    var dismissIndicator:MiniToLargeViewInteractor? = nil
+    func interactionControllerForPresentation(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        if self.disableInteractivePlayerTransitioning {
+            return nil
+        }
+        return self.presentIndicator
+    }
+    func interactionControllerForDismissal(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        if self.disableInteractivePlayerTransitioning {
+            return nil
+        }
+        return self.dismissIndicator
+    }
 
 }
 
