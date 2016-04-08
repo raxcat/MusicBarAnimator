@@ -9,16 +9,21 @@
 import UIKit
 import MusicBarAnimator
 
-class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
+class ViewController: UIViewController, UIViewControllerTransitioningDelegate, MiniToLargeViewAnimatorExtra {
 
     
     var disableInteractivePlayerTransitioning: Bool =  false
 //    weak var dummyView:DummyView? = nil
     var standaloneViewController: StandaloneViewController?
     
+    @IBOutlet weak var testView: UIImageView!
+    @IBOutlet weak var movieView: UIImageView!
     @IBOutlet weak var barView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(UIScreen.mainScreen().bounds)
+        
         if let vc = self.storyboard?.instantiateViewControllerWithIdentifier("standalone") as? StandaloneViewController{
             vc.transitioningDelegate = self
             self.standaloneViewController = vc
@@ -62,6 +67,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
         let animator = MiniToLargeViewAnimator()
         animator.initialY = kButtonHeight
         animator.barView = self.barView
+        animator.movieView = self.movieView
         animator.transitionType = BasicAnimator.ModalAnimatedTransitioningType.Present
         return animator
     }
@@ -71,6 +77,10 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
         animator.initialY = kButtonHeight
         animator.barView = self.barView
         animator.transitionType = BasicAnimator.ModalAnimatedTransitioningType.Dismiss
+        guard let standalone = self.presentedViewController as? StandaloneViewController else {
+            return animator
+        }
+        animator.movieView = standalone.imageview
         return animator
     }
     
@@ -87,6 +97,10 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
             return nil
         }
         return self.dismissIndicator
+    }
+    
+    func movieViewDestRect() -> CGRect {
+        return CGRectMake(146, 302, 203, 138)
     }
 
 }

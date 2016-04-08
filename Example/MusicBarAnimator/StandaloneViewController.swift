@@ -7,14 +7,21 @@
 //
 
 import UIKit
-
-class StandaloneViewController: UIViewController {
+import MusicBarAnimator
+class StandaloneViewController: UIViewController, MiniToLargeViewAnimatorExtra{
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
 
+    func movieViewDestRect() -> CGRect {
+        guard let v = self.imageview else {
+            return CGRectZero
+        }
+        return v.frame
+    }
+    
     @IBOutlet weak var imageview: UIImageView!
 
     @IBAction func dismiss(){
