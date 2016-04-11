@@ -21,6 +21,12 @@ class StandaloneViewController: UIViewController, MiniToLargeViewAnimatorExtra{
         }
         return v.frame
     }
+    func destMovieView() -> UIView {
+        guard let v = self.imageview else {
+            return self.view
+        }
+        return self.imageview
+    }
     
     @IBOutlet weak var imageview: UIImageView!
 

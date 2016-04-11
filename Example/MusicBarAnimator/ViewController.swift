@@ -7,22 +7,25 @@
 //
 
 import UIKit
+import AVFoundation
 import MusicBarAnimator
 
 class ViewController: UIViewController, UIViewControllerTransitioningDelegate, MiniToLargeViewAnimatorExtra {
 
     
     var disableInteractivePlayerTransitioning: Bool =  false
-//    weak var dummyView:DummyView? = nil
     var standaloneViewController: StandaloneViewController?
     
+    var playerItem:AVPlayerItem?
+    var player:AVPlayer?
+    var playerLayer:AVPlayerLayer?
+    
+    
     @IBOutlet weak var testView: UIImageView!
-    @IBOutlet weak var movieView: UIImageView!
+    @IBOutlet weak var movieView: UIView!
     @IBOutlet weak var barView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(UIScreen.mainScreen().bounds)
         
         if let vc = self.storyboard?.instantiateViewControllerWithIdentifier("standalone") as? StandaloneViewController{
             vc.transitioningDelegate = self
@@ -35,6 +38,14 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate, M
         if let view = self.standaloneViewController?.view, vc = self.standaloneViewController {
             self.dismissIndicator?.attachToViewController(vc, withView: view)
         }
+        
+        let url = NSURL(string: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
+        playerItem = AVPlayerItem(URL: url!)
+        player = AVPlayer(playerItem: playerItem!)
+        playerLayer = AVPlayerLayer(player: player!)
+        playerLayer?.frame = self.movieView.bounds
+        self.movieView.layer.addSublayer(playerLayer!)
+        player?.play()
         
     }
     
@@ -68,6 +79,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate, M
         animator.initialY = kButtonHeight
         animator.barView = self.barView
         animator.movieView = self.movieView
+        animator.movieLayer = playerLayer
         animator.transitionType = BasicAnimator.ModalAnimatedTransitioningType.Present
         return animator
     }
@@ -104,4 +116,5 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate, M
     }
 
 }
+
 

@@ -1,5 +1,7 @@
 //Original credit: http://imnotyourson.com/draggable-view-controller-interactive-view-controller/
 
+import AVFoundation
+
 public class MiniToLargeViewAnimator: BasicAnimator {
 
     ///InitialY from the bottom
@@ -13,6 +15,9 @@ public class MiniToLargeViewAnimator: BasicAnimator {
     
     //The movie view you wanna show in animation process. (Optional)
     public weak var movieView:UIView?
+    
+    //AVPlayerLayer you want to animate(optional)
+    public weak var movieLayer:AVPlayerLayer?
     
     public override func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return kAnimationDuration
@@ -38,40 +43,58 @@ public class MiniToLargeViewAnimator: BasicAnimator {
         //calculate movie view animation frame
         var movieDestRect = CGRectZero
         var movieOriginalRect = CGRectZero
+        var movieOriginalView:UIView? = nil
         
         toVC.view.layoutSubviews()  //force toVC.view auto layout to calculate runtime frame
         movieDestRect = (toVC as? MiniToLargeViewAnimatorExtra)?.movieViewDestRect?() ?? CGRectZero
-        if let movieView = self.movieView {
-            movieOriginalRect = movieView.frame
-            if let _ = movieView.superview{
-                movieView.frame = movieView.superview!.convertRect(movieView.frame, toView:fromVC.view)
-            }
-            movieView.removeFromSuperview()
-            movieView.translatesAutoresizingMaskIntoConstraints = true
-            movieView.removeConstraints(movieView.constraints)
-            container?.addSubview(movieView)
+        if let layer = self.movieLayer, view = self.movieView {
+            movieOriginalRect = layer.frame
+            
+            CATransaction.begin()
+            CATransaction.setDisableActions(true)
+            layer.removeFromSuperlayer()
+            container?.layer.addSublayer(layer)
+            layer.frame = movieDestRect
+            CATransaction.commit()
+            
+            let animation = CABasicAnimation(keyPath: "position")
+            animation.fromValue = NSValue(CGPoint: CGPointMake(CGRectGetMidX(view.frame), CGRectGetMidY(view.frame)))
+            animation.toValue = NSValue(CGPoint:CGPointMake(CGRectGetMidX(movieDestRect), CGRectGetMidY(movieDestRect)))
+            animation.duration = self.kAnimationDuration
+            
+            let sizeAnimation = CABasicAnimation(keyPath:"bounds")
+            sizeAnimation.fromValue = NSValue(CGRect:view.bounds)
+            sizeAnimation.toValue = NSValue(CGRect:CGRectMake(0, 0, movieDestRect.size.width, movieDestRect.size.height))
+            sizeAnimation.duration = self.kAnimationDuration
+            
+            let group = CAAnimationGroup()
+            group.duration = self.kAnimationDuration
+            group.animations = [animation, sizeAnimation]
+            layer.addAnimation(group, forKey: nil)
+
         }
         
         UIView.animateWithDuration(kAnimationDuration, animations: { () -> Void in
             toVC.view.frame = fromVCRect
             fakeMiniBarView.frame = barFrame
             fromVC.view.alpha = 0.0
-            self.movieView?.frame = movieDestRect
             
         }) { (finished) -> Void in
             fromVC.view.alpha = 1.0
             fakeMiniBarView.removeFromSuperview()
-
-            if let movieView = self.movieView {
-                movieView.removeFromSuperview()
-                movieView.removeConstraints(movieView.constraints)
-                movieView.frame = movieOriginalRect
-                fromVC.view.addSubview(movieView)
-            }
             
             if transitionContext.transitionWasCancelled() {
                 transitionContext.completeTransition(false)
             }else{
+                if let layer = self.movieLayer , destMovieView = (toVC as? MiniToLargeViewAnimatorExtra)?.destMovieView?(){
+                    CATransaction.begin()
+                    CATransaction.setDisableActions(true)
+                    layer.removeFromSuperlayer()
+                    layer.frame = destMovieView.bounds
+                    destMovieView.layer.addSublayer(layer)
+                    CATransaction.commit()
+                }
+                
                 transitionContext.completeTransition(true)
             }
         }
@@ -143,4 +166,24 @@ public class MiniToLargeViewAnimator: BasicAnimator {
 
 @objc public protocol MiniToLargeViewAnimatorExtra{
     optional func movieViewDestRect() -> CGRect
+    optional func destMovieView() -> UIView
+}
+
+
+extension UIView {
+    ///Use this method to render an image object.
+    /// - parameter userLayer : If true, this method use older method renderInContext: to draw. Else, iOS7 new method drawViewHierarchyInRect: is used.
+    ///
+    /// - Note: Use iOS7 new drawing method cause some issues under circumstances of container view when doing custom view controller transition.
+    func snapshot(useLayer:Bool = true) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(self.bounds.size, true, 0)
+        if(useLayer == false){
+            self.drawViewHierarchyInRect(self.bounds, afterScreenUpdates: true)
+        }else{
+            layer.renderInContext(UIGraphicsGetCurrentContext()!)
+        }
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
 }

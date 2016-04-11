@@ -87,22 +87,22 @@
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie" translatesAutoresizingMaskIntoConstraints="NO" id="Q5q-AR-bWs">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uTu-U0-ElJ">
                                         <rect key="frame" x="146" y="302" width="203" height="138"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="138" id="EZB-m3-wED"/>
-                                            <constraint firstAttribute="width" constant="203" id="FiO-1y-Irr"/>
+                                            <constraint firstAttribute="width" constant="203" id="A3q-P8-oiR"/>
+                                            <constraint firstAttribute="height" constant="138" id="mdu-6S-Z3Y"/>
                                         </constraints>
-                                    </imageView>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="Q5q-AR-bWs" firstAttribute="top" secondItem="kGi-zb-Mfv" secondAttribute="top" constant="302" id="3wf-Dh-sTF"/>
-                                    <constraint firstItem="Q5q-AR-bWs" firstAttribute="leading" secondItem="kGi-zb-Mfv" secondAttribute="leading" constant="146" id="Enc-NO-29z"/>
+                                    <constraint firstItem="uTu-U0-ElJ" firstAttribute="top" secondItem="kGi-zb-Mfv" secondAttribute="top" constant="302" id="3j9-jm-MF2"/>
                                     <constraint firstItem="JEJ-KC-wKl" firstAttribute="leading" secondItem="kGi-zb-Mfv" secondAttribute="leading" id="NTr-5g-Z19"/>
                                     <constraint firstAttribute="trailing" secondItem="JEJ-KC-wKl" secondAttribute="trailing" id="Ooe-Aw-cqJ"/>
                                     <constraint firstItem="JEJ-KC-wKl" firstAttribute="top" secondItem="kGi-zb-Mfv" secondAttribute="top" id="U1h-jT-E5r"/>
+                                    <constraint firstItem="uTu-U0-ElJ" firstAttribute="leading" secondItem="kGi-zb-Mfv" secondAttribute="leading" constant="146" id="kbL-Ph-1TP"/>
                                     <constraint firstAttribute="bottom" secondItem="JEJ-KC-wKl" secondAttribute="bottom" id="zd2-cg-AHD"/>
                                 </constraints>
                             </view>
@@ -120,7 +120,7 @@
                     </view>
                     <connections>
                         <outlet property="barView" destination="hUL-pU-UK9" id="J2n-uc-ygR"/>
-                        <outlet property="movieView" destination="Q5q-AR-bWs" id="mDB-1x-2gI"/>
+                        <outlet property="movieView" destination="uTu-U0-ElJ" id="Dc2-0W-qTS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
