@@ -10,26 +10,22 @@ import UIKit
 import MusicBarAnimator
 class StandaloneViewController: UIViewController, MiniToLargeViewAnimatorExtra{
 
+    var viewController:ViewController? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
 
-    func movieViewDestRect() -> CGRect {
-        guard let v = self.imageview else {
-            return CGRectZero
-        }
-        return v.frame
-    }
-    func destMovieView() -> UIView {
-        guard let v = self.imageview else {
-            return self.view
-        }
-        return self.imageview
-    }
     
     @IBOutlet weak var imageview: UIImageView!
 
+    @IBOutlet weak var addtoView: UIButton!
+    @IBAction func clickAddToView(sender: AnyObject) {
+        
+        viewController?.addPlayerLayerToView()
+    }
+    
     @IBAction func dismiss(){
         self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
     }
